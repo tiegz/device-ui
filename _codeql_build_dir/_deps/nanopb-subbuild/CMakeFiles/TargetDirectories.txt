@@ -1,0 +1,3 @@
+/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate.dir
+/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/nanopb-subbuild/CMakeFiles/edit_cache.dir
+/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/nanopb-subbuild/CMakeFiles/rebuild_cache.dir

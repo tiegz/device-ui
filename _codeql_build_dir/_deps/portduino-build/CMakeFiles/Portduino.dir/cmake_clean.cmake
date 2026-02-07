@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/Portduino.dir/cores/arduino/api/Common.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/Common.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/IPAddress.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/IPAddress.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/Print.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/Print.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/Stream.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/Stream.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/String.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/arduino/api/String.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/Utility.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/Utility.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/dtostrf.c.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/dtostrf.c.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/itoa.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/itoa.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxCommon.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxCommon.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxHardwareI2C.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxHardwareI2C.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxSerial.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxSerial.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/millis.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/linux/millis.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/main.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/main.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/simulated/SimCommon.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/simulated/SimCommon.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/simulated/SimHardwareI2C.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/simulated/SimHardwareI2C.cpp.o.d"
+  "CMakeFiles/Portduino.dir/cores/portduino/simulated/SimHardwareSPI.cpp.o"
+  "CMakeFiles/Portduino.dir/cores/portduino/simulated/SimHardwareSPI.cpp.o.d"
+  "libPortduino.a"
+  "libPortduino.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C CXX)
+  include(CMakeFiles/Portduino.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
