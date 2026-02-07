@@ -1,0 +1,14 @@
+# Target labels
+ lovyangfx-populate
+# Source files and their labels
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/CMakeFiles/lovyangfx-populate
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/CMakeFiles/lovyangfx-populate.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/CMakeFiles/lovyangfx-populate-complete.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-build.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-configure.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-download.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-install.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-mkdir.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-patch.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-test.rule
+/home/runner/work/device-ui/device-ui/build/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-update.rule

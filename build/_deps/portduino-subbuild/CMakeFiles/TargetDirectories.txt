@@ -1,0 +1,3 @@
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/CMakeFiles/portduino-populate.dir
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/CMakeFiles/edit_cache.dir
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/CMakeFiles/rebuild_cache.dir

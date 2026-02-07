@@ -1,0 +1,14 @@
+# Target labels
+ nanopb-populate
+# Source files and their labels
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate-complete.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-build.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-configure.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-download.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-install.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-mkdir.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-patch.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-test.rule
+/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-update.rule

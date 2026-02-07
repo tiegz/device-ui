@@ -57,6 +57,9 @@ class MapPanel
     void setNoTileImage(const lv_image_dsc_t *img_src);
     void forceRedraw(bool onlyObjects = false);
     bool redrawComplete(void) { return redrawCompleted; }
+    // distance scale
+    void setDistanceScaleVisible(bool visible);
+    void updateDistanceScale(void);
     // for debugging
     void printTiles(void);
     // must be called for incremental drawing of all changes
@@ -97,6 +100,7 @@ class MapPanel
     lv_obj_t *homeLocationImage;       // lvgl image of home position
     lv_obj_t *gpsPositionImage;        // lvgl image of actual position
     const lv_image_dsc_t *noTileImage; // lvgl image src for displaying "no tile"
+    lv_obj_t *distanceScaleLabel;      // lvgl label for distance scale
     TileService *service;              // tile service provider
     uint32_t objectsOnMap;             // num of visible objcts on map
     std::unordered_map<uint32_t, std::unique_ptr<MapTile>> tiles;

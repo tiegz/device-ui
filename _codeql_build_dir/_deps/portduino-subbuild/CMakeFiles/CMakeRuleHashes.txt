@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+7b7daf5dec6703f85de70f23d1aa7139 CMakeFiles/portduino-populate
+43fceca5817e0a0a98b54281ef20d6f0 CMakeFiles/portduino-populate-complete
+afe581ac16a12acfbed19cf82c9c3c64 portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-build
+740705fd1b2d4301d93533a808599545 portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-configure
+afa3a1b416518fc21ed2311d75a71401 portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-download
+4da2772c2bc32c48b91a6ac6bf325c58 portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-install
+9d5ae4a8f11bba431f498135cab03e74 portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-mkdir
+ddf967fd1632c779cc9cbdf0b7017e5e portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-patch
+d53925e9b6b54092ec85a44ad496574d portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-test
+51f25f8a42714080f9f52ea6eadab23b portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-update

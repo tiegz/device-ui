@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/CMakeFiles/lovyangfx-populate"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/CMakeFiles/lovyangfx-populate.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/CMakeFiles/lovyangfx-populate-complete.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-build.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-configure.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-download.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-install.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-patch.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-test.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-subbuild/lovyangfx-populate-prefix/src/lovyangfx-populate-stamp/lovyangfx-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"lovyangfx-populate"
+		],
+		"name" : "lovyangfx-populate"
+	}
+}

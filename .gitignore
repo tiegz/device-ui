@@ -4,4 +4,4 @@
 .vscode/launch.json
 .vscode/ipch
 studio
-build
+build_codeql_build_dir

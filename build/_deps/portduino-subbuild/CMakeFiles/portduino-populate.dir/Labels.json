@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/CMakeFiles/portduino-populate"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/CMakeFiles/portduino-populate.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/CMakeFiles/portduino-populate-complete.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-build.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-configure.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-download.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-install.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-patch.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-test.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/portduino-subbuild/portduino-populate-prefix/src/portduino-populate-stamp/portduino-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"portduino-populate"
+		],
+		"name" : "portduino-populate"
+	}
+}

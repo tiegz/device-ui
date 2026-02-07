@@ -1,0 +1,3 @@
+CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s3/Bus_RGB.cpp.o: \
+ /home/runner/work/device-ui/device-ui/_codeql_build_dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s3/Bus_RGB.cpp \
+ /usr/include/stdc-predef.h
