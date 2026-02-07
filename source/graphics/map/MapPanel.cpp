@@ -11,7 +11,7 @@ MapPanel::MapPanel(lv_obj_t *p, ITileService *s)
     : widthPixel(320), heightPixel(240),
       home(GeoPoint(MapTileSettings::getDefaultLat(), MapTileSettings::getDefaultLon(), MapTileSettings::getZoomLevel())),
       current(home), scrolled(home), panel(p), homeLocationImage(nullptr), gpsPositionImage(nullptr), noTileImage(nullptr),
-      service(new TileService(s)), objectsOnMap(0)
+      distanceScaleLabel(nullptr), service(new TileService(s)), objectsOnMap(0)
 {
     extern OSMTiles<lv_obj_t> *osm;
     osm = OSMTiles<lv_obj_t>::create([this](const char *name, void *img) -> bool { return service->load(name, img); });
@@ -171,6 +171,7 @@ void MapPanel::center(void)
     xStart = scrolled.xTile - (xpos / size + 1);
     yStart = scrolled.yTile - (ypos / size + 1);
     needsRedraw = true;
+    updateDistanceScale();
 }
 
 void MapPanel::setTileService(ITileService *s)
@@ -244,6 +245,7 @@ void MapPanel::setZoom(uint8_t zoom)
         current.setZoom(zoom);
         scrolled.setZoom(zoom);
         center();
+        updateDistanceScale();
     }
 }
 
@@ -496,8 +498,93 @@ void MapPanel::task_handler(void)
     redraw();
 }
 
+void MapPanel::setDistanceScaleVisible(bool visible)
+{
+    if (visible && !distanceScaleLabel && panel) {
+        // Create the distance scale label if it doesn't exist
+        distanceScaleLabel = lv_label_create(panel);
+        lv_obj_set_pos(distanceScaleLabel, 10, heightPixel - 30);
+        lv_obj_set_style_bg_color(distanceScaleLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_opa(distanceScaleLabel, 180, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_pad_all(distanceScaleLabel, 4, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_color(distanceScaleLabel, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+        updateDistanceScale();
+    } else if (!visible && distanceScaleLabel) {
+        lv_obj_delete(distanceScaleLabel);
+        distanceScaleLabel = nullptr;
+    }
+}
+
+void MapPanel::updateDistanceScale(void)
+{
+    if (!distanceScaleLabel)
+        return;
+    
+    // Calculate scale distance based on zoom level and latitude
+    // At the equator, the ground resolution (meters/pixel) is: 
+    // (Earth circumference) / (256 * 2^zoom)
+    // Adjusted by cos(latitude) for the current position
+    
+    const double EARTH_CIRCUMFERENCE = 40075017.0; // meters at equator
+    uint8_t zoom = MapTileSettings::getZoomLevel();
+    int16_t tileSize = MapTileSettings::getTileSize();
+    double lat_rad = scrolled.latitude * M_PI / 180.0;
+    
+    // Meters per pixel at current latitude and zoom level
+    double metersPerPixel = (EARTH_CIRCUMFERENCE * cos(lat_rad)) / (tileSize * (1 << zoom));
+    
+    // Choose a nice round scale bar length (50, 100, 200, 500, 1000, 2000, 5000 meters, etc.)
+    double scaleDistanceMeters;
+    int scaleWidthPixels = 100; // Target width in pixels
+    
+    double targetMeters = metersPerPixel * scaleWidthPixels;
+    
+    // Find the nearest nice round number
+    if (targetMeters < 50) {
+        scaleDistanceMeters = 20;
+    } else if (targetMeters < 100) {
+        scaleDistanceMeters = 50;
+    } else if (targetMeters < 200) {
+        scaleDistanceMeters = 100;
+    } else if (targetMeters < 500) {
+        scaleDistanceMeters = 200;
+    } else if (targetMeters < 1000) {
+        scaleDistanceMeters = 500;
+    } else if (targetMeters < 2000) {
+        scaleDistanceMeters = 1000;
+    } else if (targetMeters < 5000) {
+        scaleDistanceMeters = 2000;
+    } else if (targetMeters < 10000) {
+        scaleDistanceMeters = 5000;
+    } else if (targetMeters < 20000) {
+        scaleDistanceMeters = 10000;
+    } else {
+        scaleDistanceMeters = 20000;
+    }
+    
+    // Calculate actual pixel width for the chosen distance
+    scaleWidthPixels = (int)(scaleDistanceMeters / metersPerPixel);
+    
+    // Format the distance string
+    char scaleText[32];
+    if (scaleDistanceMeters < 1000) {
+        snprintf(scaleText, sizeof(scaleText), "%d m", (int)scaleDistanceMeters);
+    } else {
+        snprintf(scaleText, sizeof(scaleText), "%.1f km", scaleDistanceMeters / 1000.0);
+    }
+    
+    lv_label_set_text(distanceScaleLabel, scaleText);
+    
+    // Update scale bar width by drawing a line or using width property
+    // For simplicity, we'll just show the text; a visual bar could be added later
+    lv_obj_move_foreground(distanceScaleLabel);
+}
+
 MapPanel::~MapPanel(void)
 {
+    if (distanceScaleLabel) {
+        lv_obj_delete(distanceScaleLabel);
+    }
     delete service;
 }
 

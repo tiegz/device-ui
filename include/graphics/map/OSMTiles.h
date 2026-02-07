@@ -27,7 +27,7 @@ template <class IMG> class OSMTiles
     // create instance of this class and provide cb function for loading images
     static OSMTiles *create(std::function<bool(const char *, IMG *)> cb);
 
-    // filename caching for GeoPoint tile
+    // filename caching for GeoPoint tile with zoom level fallback
     bool load(OSMTiles::Tile &tile, IMG *img)
     {
         if (!tile.filename[0]) {
@@ -35,7 +35,31 @@ template <class IMG> class OSMTiles
                           MapTileSettings::getTileStyle(), tile.zoomLevel, tile.xTile, tile.yTile,
                           MapTileSettings::getTileFormat());
         }
-        return loadcb(tile.filename, img);
+        
+        // Try to load the requested tile at the current zoom level
+        if (loadcb(tile.filename, img)) {
+            return true;
+        }
+        
+        // If tile not found, try fallback to lower zoom levels
+        // Each zoom level down means tile coordinates are divided by 2
+        for (uint8_t fallbackZoom = tile.zoomLevel - 1; fallbackZoom > 0 && fallbackZoom < tile.zoomLevel; fallbackZoom--) {
+            // Calculate tile coordinates at lower zoom level
+            uint32_t scaledX = tile.xTile >> (tile.zoomLevel - fallbackZoom);
+            uint32_t scaledY = tile.yTile >> (tile.zoomLevel - fallbackZoom);
+            
+            char fallbackName[IMG_PATH_LEN];
+            std::snprintf(fallbackName, IMG_PATH_LEN, "%s/%s%d/%d/%d.%s", MapTileSettings::getPrefix(),
+                          MapTileSettings::getTileStyle(), fallbackZoom, scaledX, scaledY,
+                          MapTileSettings::getTileFormat());
+            
+            if (loadcb(fallbackName, img)) {
+                // Successfully loaded a lower zoom level tile
+                return true;
+            }
+        }
+        
+        return false;
     }
 
   protected:
