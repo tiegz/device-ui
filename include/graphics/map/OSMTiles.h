@@ -43,7 +43,8 @@ template <class IMG> class OSMTiles
         
         // If tile not found, try fallback to lower zoom levels
         // Each zoom level down means tile coordinates are divided by 2
-        for (uint8_t fallbackZoom = tile.zoomLevel - 1; fallbackZoom > 0; fallbackZoom--) {
+        // Use int8_t to avoid underflow when decrementing to 0
+        for (int8_t fallbackZoom = tile.zoomLevel - 1; fallbackZoom > 0; fallbackZoom--) {
             // Calculate tile coordinates at lower zoom level
             uint32_t scaledX = tile.xTile >> (tile.zoomLevel - fallbackZoom);
             uint32_t scaledY = tile.yTile >> (tile.zoomLevel - fallbackZoom);

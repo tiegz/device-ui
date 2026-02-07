@@ -533,33 +533,20 @@ void MapPanel::updateDistanceScale(void)
     // Meters per pixel at current latitude and zoom level
     double metersPerPixel = (EARTH_CIRCUMFERENCE * cos(lat_rad)) / (tileSize * (1 << zoom));
     
-    // Choose a nice round scale bar length (50, 100, 200, 500, 1000, 2000, 5000 meters, etc.)
-    double scaleDistanceMeters;
+    // Choose a nice round scale bar length
     int scaleWidthPixels = 100; // Target width in pixels
-    
     double targetMeters = metersPerPixel * scaleWidthPixels;
     
-    // Find the nearest nice round number
-    if (targetMeters < 50) {
-        scaleDistanceMeters = 20;
-    } else if (targetMeters < 100) {
-        scaleDistanceMeters = 50;
-    } else if (targetMeters < 200) {
-        scaleDistanceMeters = 100;
-    } else if (targetMeters < 500) {
-        scaleDistanceMeters = 200;
-    } else if (targetMeters < 1000) {
-        scaleDistanceMeters = 500;
-    } else if (targetMeters < 2000) {
-        scaleDistanceMeters = 1000;
-    } else if (targetMeters < 5000) {
-        scaleDistanceMeters = 2000;
-    } else if (targetMeters < 10000) {
-        scaleDistanceMeters = 5000;
-    } else if (targetMeters < 20000) {
-        scaleDistanceMeters = 10000;
-    } else {
-        scaleDistanceMeters = 20000;
+    // Find the nearest nice round number using a lookup table
+    static const double scaleOptions[] = {20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000};
+    static const int numOptions = sizeof(scaleOptions) / sizeof(scaleOptions[0]);
+    
+    double scaleDistanceMeters = scaleOptions[numOptions - 1]; // default to largest
+    for (int i = 0; i < numOptions; i++) {
+        if (targetMeters < scaleOptions[i] * 1.5) {
+            scaleDistanceMeters = scaleOptions[i];
+            break;
+        }
     }
     
     // Calculate actual pixel width for the chosen distance
