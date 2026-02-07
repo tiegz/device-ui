@@ -1,0 +1,142 @@
+[  0%] Generating C++ files from /home/runner/work/device-ui/device-ui/build/_deps/protobuf-src/meshtastic/xmodem.proto
+[  0%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/arduino/api/Common.cpp.o
+[  0%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/LGFXBase.cpp.o
+[  0%] Building C object _deps/lvgl-build/CMakeFiles/lvgl_demos.dir/demos/benchmark/assets/img_benchmark_avatar.c.o
+[  1%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/arduino/api/IPAddress.cpp.o
+Traceback (most recent call last):
+  File "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-src/generator/protoc", line 44, in <module>
+    status = invoke_protoc(['protoc'] + args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-src/generator/proto/_utils.py", line 76, in invoke_protoc
+    return subprocess.call(argv)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'protoc'
+make[2]: *** [CMakeFiles/Protobufs.dir/build.make:228: mesh/generated/meshtastic/xmodem.pb.cpp] Error 1
+make[1]: *** [CMakeFiles/Makefile2:281: CMakeFiles/Protobufs.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[  1%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/arduino/api/Print.cpp.o
+In file included from /home/runner/work/device-ui/device-ui/build/_deps/lvgl-src/src/drivers/libinput/lv_libinput.h:25,
+                 from /home/runner/work/device-ui/device-ui/build/_deps/lvgl-src/src/drivers/lv_drivers.h:45,
+                 from /home/runner/work/device-ui/device-ui/build/_deps/lvgl-src/lvgl.h:128,
+                 from /home/runner/work/device-ui/device-ui/build/_deps/lvgl-src/demos/benchmark/assets/img_benchmark_avatar.c:10:
+/home/runner/work/device-ui/device-ui/build/_deps/lvgl-src/src/drivers/libinput/lv_xkb.h:23:10: fatal error: xkbcommon/xkbcommon.h: No such file or directory
+   23 | #include <xkbcommon/xkbcommon.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [_deps/lvgl-build/CMakeFiles/lvgl_demos.dir/build.make:79: _deps/lvgl-build/CMakeFiles/lvgl_demos.dir/demos/benchmark/assets/img_benchmark_avatar.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1409: _deps/lvgl-build/CMakeFiles/lvgl_demos.dir/all] Error 2
+[  2%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/LGFX_Button.cpp.o
+[  2%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/LGFX_Sprite.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/arduino/api/Stream.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/arduino/api/String.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/itoa.cpp.o
+[  2%] Building C object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/dtostrf.c.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/main.cpp.o
+[  2%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/lgfx_fonts.cpp.o
+[  2%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/misc/DividedFrameBuffer.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/linux/millis.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/simulated/SimCommon.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/Utility.cpp.o
+[  2%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/misc/SpriteBuffer.cpp.o
+[  2%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/simulated/SimHardwareSPI.cpp.o
+[  3%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/simulated/SimHardwareI2C.cpp.o
+In file included from /home/runner/work/device-ui/device-ui/build/_deps/portduino-src/cores/portduino/simulated/SimHardwareI2C.h:9,
+                 from /home/runner/work/device-ui/device-ui/build/_deps/portduino-src/cores/portduino/simulated/SimHardwareI2C.cpp:5:
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-src/cores/portduino/simulated/SimHardwareI2C.h: In member function ‘virtual int arduino::SimHardwareI2C::writeQuick(uint8_t)’:
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-src/cores/portduino/Utility.h:27:26: warning: no return statement in function returning non-void [-Wreturn-type]
+   27 |   { notImplemented(msg); }
+      |                          ^
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-src/cores/portduino/simulated/SimHardwareI2C.h:25:43: note: in expansion of macro ‘NOT_IMPLEMENTED’
+   25 |   virtual int writeQuick(uint8_t toWrite) NOT_IMPLEMENTED("writeQuick");
+      |                                           ^~~~~~~~~~~~~~~
+[  3%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/misc/common_function.cpp.o
+[  3%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxCommon.cpp.o
+[  3%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxSerial.cpp.o
+[  3%] Building CXX object _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxHardwareI2C.cpp.o
+/home/runner/work/device-ui/device-ui/build/_deps/portduino-src/cores/portduino/linux/LinuxHardwareI2C.cpp:16:14: fatal error: i2c/smbus.h: No such file or directory
+   16 |     #include <i2c/smbus.h>
+      |              ^~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [_deps/portduino-build/CMakeFiles/Portduino.dir/build.make:289: _deps/portduino-build/CMakeFiles/Portduino.dir/cores/portduino/linux/LinuxHardwareI2C.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[  3%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/misc/pixelcopy.cpp.o
+[  3%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_Device.cpp.o
+[  3%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_FlexibleFrameBuffer.cpp.o
+make[1]: *** [CMakeFiles/Makefile2:1281: _deps/portduino-build/CMakeFiles/Portduino.dir/all] Error 2
+[  3%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_FrameBufferBase.cpp.o
+[  3%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_GDEW0154M09.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_HUB75.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_HasBuffer.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_ILI9225.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_IT8951.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_LCD.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_M5HDMI.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_M5UnitGLASS.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_M5UnitLCD.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_NT35510.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_RA8875.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_RM68120.cpp.o
+[  4%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_SSD1306.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_SSD1327.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_SSD1331.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_SSD1351.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/panel/Panel_SSD1963.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/arduino_default/Bus_SPI.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/arduino_default/Bus_Stream.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/arduino_default/common.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/Bus_HUB75.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/Bus_I2C.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/Bus_Parallel8.cpp.o
+[  5%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/Bus_SPI.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/Light_PWM.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/Panel_CVBS.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32/common.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32c3/Bus_Parallel8.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s2/Bus_Parallel16.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s2/Bus_Parallel8.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s3/Bus_Parallel16.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s3/Bus_Parallel8.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s3/Bus_RGB.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp32s3/Panel_RGB.cpp.o
+[  6%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp8266/Bus_I2C.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp8266/Bus_SPI.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/esp8266/common.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/framebuffer/Panel_fb.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/framebuffer/common.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/opencv/Panel_OpenCV.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/opencv/common.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/rp2040/Bus_I2C.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/rp2040/Bus_SPI.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/rp2040/Light_PWM.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/rp2040/common.cpp.o
+[  7%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/samd21/Bus_I2C.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/samd21/Bus_SPI.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/samd21/common.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/samd51/Bus_I2C.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/samd51/Bus_SPI.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/sdl/Panel_sdl.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/samd51/common.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/sdl/common.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/spresense/Bus_SPI.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/spresense/common.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/stm32/Bus_SPI.cpp.o
+[  8%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/platforms/stm32/common.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_CST816S.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_FT5x06.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_GSLx680.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_GT911.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_NS2009.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_RA8875.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_STMPE610.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_TT21xxx.cpp.o
+[  9%] Building CXX object CMakeFiles/LovyanGFX.dir/_deps/lovyangfx-src/src/lgfx/v1/touch/Touch_XPT2046.cpp.o
+[  9%] Linking CXX static library libLovyanGFX.a
+[  9%] Built target LovyanGFX
+make: *** [Makefile:146: all] Error 2

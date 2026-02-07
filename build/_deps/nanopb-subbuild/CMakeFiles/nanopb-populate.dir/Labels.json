@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/CMakeFiles/nanopb-populate-complete.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-build.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-configure.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-download.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-install.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-patch.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-test.rule"
+		},
+		{
+			"file" : "/home/runner/work/device-ui/device-ui/build/_deps/nanopb-subbuild/nanopb-populate-prefix/src/nanopb-populate-stamp/nanopb-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"nanopb-populate"
+		],
+		"name" : "nanopb-populate"
+	}
+}
