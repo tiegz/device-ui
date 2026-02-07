@@ -1,4 +1,5 @@
 #include <doctest/doctest.h>
+#include <cmath>
 
 /**
  * Test cases for tile fallback functionality
@@ -60,7 +61,6 @@ TEST_CASE("Tile coordinate scaling for fallback")
 TEST_CASE("Distance scale calculations")
 {
     const double EARTH_CIRCUMFERENCE = 40075017.0; // meters at equator
-    const double M_PI = 3.14159265358979323846;
     
     SUBCASE("Zoom level 10 at equator")
     {

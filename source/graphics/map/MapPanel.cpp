@@ -570,7 +570,13 @@ void MapPanel::updateDistanceScale(void)
     if (scaleDistanceMeters < 1000) {
         snprintf(scaleText, sizeof(scaleText), "%d m", (int)scaleDistanceMeters);
     } else {
-        snprintf(scaleText, sizeof(scaleText), "%.1f km", scaleDistanceMeters / 1000.0);
+        double km = scaleDistanceMeters / 1000.0;
+        // Only show decimal if not a whole number
+        if (km == (int)km) {
+            snprintf(scaleText, sizeof(scaleText), "%d km", (int)km);
+        } else {
+            snprintf(scaleText, sizeof(scaleText), "%.1f km", km);
+        }
     }
     
     lv_label_set_text(distanceScaleLabel, scaleText);
