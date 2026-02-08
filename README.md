@@ -45,6 +45,21 @@ Graphics using <a href="https://lvgl.io/" target="_blank">LVGL</a> library
 
 This project uses CMake and requires several system dependencies to build successfully on MacOS.
 
+### Quick Start
+
+For experienced users, here's the TL;DR:
+
+```bash
+# Install dependencies
+brew install cmake pkg-config protobuf libx11 libxkbcommon i2c-tools
+pip3 install protobuf grpcio-tools
+
+# Build
+ln -sf include/lv_conf.h lv_conf.h
+cmake -B build -S .
+cmake --build build -j$(sysctl -n hw.ncpu)
+```
+
 ### Prerequisites
 
 #### 1. Install Homebrew (if not already installed)
@@ -72,6 +87,8 @@ The nanopb generator requires Python protobuf libraries:
 ```bash
 pip3 install protobuf grpcio-tools
 ```
+
+> **Note**: This project includes X11 support for desktop simulation. While the X11 libraries from Homebrew are sufficient for building, if you want to run the X11 application on MacOS, you'll need to install [XQuartz](https://www.xquartz.org/) for the X11 server.
 
 ### Build Instructions
 
