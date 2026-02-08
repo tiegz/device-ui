@@ -41,6 +41,111 @@ Vectors and icons by <a href="https://www.svgrepo.com/" target="_blank">SVG Repo
 Graphics using <a href="https://lvgl.io/" target="_blank">LVGL</a> library
 </p>
 
+## :hammer_and_wrench: Building on MacOS
+
+This project uses CMake and requires several system dependencies to build successfully on MacOS.
+
+### Prerequisites
+
+#### 1. Install Homebrew (if not already installed)
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+#### 2. Install Required System Dependencies
+```bash
+# Install CMake and build tools
+brew install cmake pkg-config
+
+# Install Protocol Buffers compiler
+brew install protobuf
+
+# Install X11 and input libraries (required for LVGL desktop support)
+brew install libx11 libxkbcommon
+
+# Install i2c development library (required for Portduino)
+brew install i2c-tools
+```
+
+#### 3. Install Python Dependencies
+The nanopb generator requires Python protobuf libraries:
+```bash
+pip3 install protobuf grpcio-tools
+```
+
+### Build Instructions
+
+#### 1. Create a symlink for lv_conf.h
+The LVGL library expects `lv_conf.h` to be in the root directory:
+```bash
+ln -sf include/lv_conf.h lv_conf.h
+```
+
+#### 2. Configure the project with CMake
+```bash
+cmake -B build -S .
+```
+
+#### 3. Build the project
+```bash
+cmake --build build -j$(sysctl -n hw.ncpu)
+```
+
+The compiled library will be available in `build/libDeviceUI.a` and test executables in `build/bin/tests`.
+
+### Running Tests
+If you built with tests enabled (default when building as main project):
+```bash
+./build/bin/tests
+```
+
+### Troubleshooting
+
+#### Missing lv_conf.h error
+If you see an error about `lv_conf.h` not found, make sure you created the symlink:
+```bash
+ln -sf include/lv_conf.h lv_conf.h
+```
+
+#### Missing protoc
+If you get "protoc: command not found":
+```bash
+brew install protobuf
+```
+
+#### Missing Python protobuf module
+If you see "ModuleNotFoundError: No module named 'google'":
+```bash
+pip3 install protobuf grpcio-tools
+```
+
+#### Missing X11 libraries
+If you see errors about missing X11 or xkbcommon headers:
+```bash
+brew install libx11 libxkbcommon
+```
+
+#### Missing i2c headers
+If you see "i2c/smbus.h: No such file or directory":
+```bash
+brew install i2c-tools
+```
+
+### Build Options
+
+You can customize the build with CMake options:
+
+```bash
+# Disable tests
+cmake -B build -S . -DENABLE_DOCTESTS=OFF
+
+# Enable debug logging
+cmake -B build -S . -DENABLE_DEBUG_LOG=ON
+
+# Specify a different view (default is ui_320x240)
+cmake -B build -S . -DVIEW=ui_240x240
+```
+
 ## :pencil: TODOs
 
 ### General Architecture
